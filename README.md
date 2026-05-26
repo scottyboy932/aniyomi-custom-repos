@@ -1,30 +1,39 @@
-Anikoto Custom - Aniyomi Extension Repository
+# Anikoto Custom - Aniyomi Extension Repository
 
-This is a simple repository for hosting custom extensions for Aniyomi (and Mihon-based apps).
+This repo is for **GitHub-hosted distribution** of your custom Aniyomi extensions.
 
-## How to use
+## Add to Aniyomi
 
-In Aniyomi go to:
-Settings → Browse → Extension repos (or Anime extension repos) → Add
+In Aniyomi:
+**Settings → Browse → Extension repos → +**
 
-Paste this URL:
-
+Paste:
+```
 https://raw.githubusercontent.com/scottyboy932/aniyomi-custom-repos/repo/index.min.json
+```
 
 ## Structure
 
-- `main` branch: human-editable files (index.json, any source code you want to keep)
-- `repo` branch: clean distribution that Aniyomi reads (index.min.json at root + apk/ folder)
+- `main` branch: Human-editable files (index.json, docs)
+- `repo` branch: Clean distribution that Aniyomi reads (index.min.json + apk/ folder)
 
-## Adding extensions
+## Source Code (Development)
 
-1. Build or obtain the .apk
-2. Put it in the `apk/` folder on the `repo` branch
-3. Update `index.json` on main with the correct metadata
-4. Generate `index.min.json` and push it (and the apk) to the `repo` branch
+All custom extension Kotlin code lives in your fork:
+https://github.com/scottyboy932/aniyomi-extensions
 
-## For Roku 4K Stick
+Your Anikoto source is at:
+`src/en/anikototv/AnikotoTV.kt`
 
-Add the repo URL above in Aniyomi on your phone, then screen mirror. The custom extensions will be available on the TV.
+## Workflow (Personal Use + Roku)
 
-This repo exists so you have full control over your sources.
+1. Develop / edit source in your fork.
+2. Build the .apk (using Android Studio + the template).
+3. Copy the APK to `apk/` on the `repo` branch of **this** repo.
+4. Update `index.json` (main branch of this repo).
+5. Run the minify script and push the new `index.min.json` + APK to the `repo` branch.
+
+6. Add the URL above in Aniyomi on your phone.
+7. Use while screen mirroring to your Roku 4K Stick.
+
+Everything stays under your control on GitHub. No local server required.
