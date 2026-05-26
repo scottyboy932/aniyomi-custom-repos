@@ -1,5 +1,9 @@
-Add this exact URL in Aniyomi:
+Anikoto Custom - Aniyomi Extension Repository
+
+Add this URL in Aniyomi:
 
 https://raw.githubusercontent.com/scottyboy932/aniyomi-custom-repos/repo/index.min.json
 
-See the main branch for full source and BUILD.md instructions.
+This is a simple hosting repo for custom Aniyomi extensions.
+
+Place compiled .apk files in the apk/ folder and keep index.min.json updated.
