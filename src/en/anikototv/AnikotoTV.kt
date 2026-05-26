@@ -14,11 +14,19 @@ import org.jsoup.nodes.Element
 
 /**
  * Custom Anikoto extension for Aniyomi.
- * 
- * Package must match exactly what you put in index.json "packageName".
- * 
- * When building the .apk, the final package in the manifest must match.
- * Update versionCode / versionName in the repo index on every release.
+ *
+ * IMPORTANT:
+ * - The package name must EXACTLY match the one declared in your index.json
+ * - Build this with the full Aniyomi/Mihon extension template (Secozzi or Keiyoushi)
+ * - The source ID in the index must match the runtime ID
+ *
+ * This is a starting skeleton. Real sites usually require:
+ * - Better selectors (inspect the actual site)
+ * - Proper video extraction (many use m3u8, different players, headers, etc.)
+ * - Handling for latest/popular/search pages
+ * - Filters, etc.
+ *
+ * Test thoroughly before relying on it for Roku mirroring.
  */
 class AnikotoTV : ParsedAnimeHttpSource() {
 
@@ -27,9 +35,8 @@ class AnikotoTV : ParsedAnimeHttpSource() {
     override val lang = "en"
     override val supportsLatest = true
 
-    // IMPORTANT: When you build the APK, the packageName in index.json
-    // must exactly match "eu.kanade.tachiyomi.animeextension.en.anikototv"
-    // and the final APK must be signed consistently.
+    // When building the APK, packageName in index.json must match this exactly.
+    // Sign consistently across all your extensions.
 
     override fun popularAnimeRequest(page: Int): Request =
         GET("$baseUrl/home")
