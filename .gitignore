@@ -1,0 +1,16 @@
+.gradle/
+build/
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+.DS_Store
+Thumbs.db
+
+local.properties
+
+*.apk
+
+node_modules/

@@ -1,0 +1,31 @@
+{
+  "name": "Anikoto Custom",
+  "badgeLabel": "ANIKOTO",
+  "signingKey": "REPLACE_WITH_YOUR_SIGNING_KEY_FINGERPRINT",
+  "contact": {
+    "website": "https://github.com/scottyboy932/aniyomi-custom-repos",
+    "discord": ""
+  },
+  "extensions": [
+    {
+      "name": "Anikoto",
+      "packageName": "eu.kanade.tachiyomi.animeextension.en.anikototv",
+      "resources": {
+        "apkUrl": "https://raw.githubusercontent.com/scottyboy932/aniyomi-custom-repos/repo/apk/tachiyomi-en.anikototv-v1.0.0.apk",
+        "iconUrl": "https://raw.githubusercontent.com/scottyboy932/aniyomi-custom-repos/repo/icon/eu.kanade.tachiyomi.animeextension.en.anikototv.png"
+      },
+      "extensionLib": "1.4",
+      "versionCode": 1,
+      "versionName": "1.0.0",
+      "sources": [
+        {
+          "id": "1234567890123456789",
+          "name": "Anikoto",
+          "language": "en",
+          "homeUrl": "https://anikototv.to",
+          "contentRating": "CONTENT_RATING_DEFAULT"
+        }
+      ]
+    }
+  ]
+}
